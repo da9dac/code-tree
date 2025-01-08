@@ -10,13 +10,13 @@ public class Main {
 
         int[] count = new int[26];
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < a.length(); i++) {
             count[a.charAt(i) - 'a']++;
         }
 
         boolean isEqual = true;
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < b.length(); i++) {
             int idx = a.charAt(i) - 'a';
             count[idx]++;
             if (count[idx] < 0) {
