@@ -8,6 +8,9 @@ public class Main {
         char[] a = br.readLine().toCharArray();
         char[] b = br.readLine().toCharArray();
 
+        Arrays.sort(a);
+        Arrays.sort(b);
+
         System.out.println(Arrays.equals(a, b) ? "Yes" : "No");
     }
 }
