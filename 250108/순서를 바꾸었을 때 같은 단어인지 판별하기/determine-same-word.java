@@ -16,12 +16,16 @@ public class Main {
 
         boolean isEqual = true;
 
-        for (int i = 0; i < b.length(); i++) {
-            int idx = a.charAt(i) - 'a';
-            count[idx]++;
-            if (count[idx] < 0) {
-                isEqual = false;
-                break;
+        if (a.length() != b.length()) {
+            isEqual = false;
+        } else {
+            for (int i = 0; i < b.length(); i++) {
+                int idx = b.charAt(i) - 'a';
+                count[idx]++;
+                if (count[idx] < 0) {
+                    isEqual = false;
+                    break;
+                }
             }
         }
 
