@@ -13,11 +13,11 @@ public class Main {
 
         sb.append("secret code : ").append(zzs.secret).append("\n")
             .append("meeting point : ").append(zzs.where).append("\n")
-            .append("time : ").append(zzs.time);
+            .append("time : ").append(zzs.hour);
 
         System.out.println(sb);
     }
-    
+
     static class ZZS {
         String secret;
         String where;
