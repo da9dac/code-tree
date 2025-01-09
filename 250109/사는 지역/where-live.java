@@ -17,7 +17,7 @@ public class Main {
 
         Arrays.sort(peoples);
 
-        System.out.println(peoples[0].toString());
+        System.out.println(peoples[n - 1].toString());
     }
 
     static class People implements Comparable<People> {
