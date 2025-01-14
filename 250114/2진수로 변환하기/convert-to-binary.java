@@ -9,6 +9,8 @@ public class Main {
 
         StringBuilder sb = new StringBuilder();
 
+        if (n == 0) sb.append(0);
+
         while (n > 0) {
             int r = n % 2;
             sb.append(r);
