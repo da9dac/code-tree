@@ -23,28 +23,27 @@ public class Main {
         Arrays.sort(after);
 
         for (int i = 0; i < n; i++) {
-            after[i].after = i + 1;
+            after[i].idx = i + 1;
         }
 
         for (Element element : before) {
-            sb.append(element.after).append(" ");
+            sb.append(element.idx).append(" ");
         }
 
         System.out.println(sb);
     }
 
     static class Element implements Comparable<Element> {
-        int before;
+        int idx;
         int num;
-        int after;
 
-        Element(int before, int num) {
-            this.before = before;
+        Element(int idx, int num) {
+            this.idx = idx;
             this.num = num;
         }
 
         public int compareTo(Element other) {
-            return this.num != other.num ? this.num - other.num : this.before - other.before;
+            return this.num != other.num ? this.num - other.num : this.idx - other.idx;
         }
     }
 }
