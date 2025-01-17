@@ -24,7 +24,7 @@ public class Main {
                 cur = end;
             } else {
                 int end = cur - x;
-                for (int j = cur; j > end; j--) {
+                for (int j = cur - 1; j >= end; j--) {
                     line[j]++;
                 }
                 cur = end;
