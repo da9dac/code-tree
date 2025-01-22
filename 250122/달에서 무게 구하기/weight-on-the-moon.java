@@ -4,6 +4,6 @@ public class Main {
         int weight = 13;
         double moonWeight = 0.165;
         double result = weight * moonWeight;
-        System.out.printf(weight + " * " + "%6f" + " = " + "%6f" , moonWeight, result);
+        System.out.printf(weight + " * " + "%.6f" + " = " + "%.6f" , moonWeight, result);
     }
 }
