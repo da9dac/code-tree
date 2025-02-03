@@ -50,19 +50,31 @@ public class Main {
 		int w = 0;
 
 		for (int i = x1; i < x2; i++) {
-			int cnt = 0;
+			int first = 0;
+            int last = 0;
+
 			for (int j = y1; j < y2; j++) {
-				if (map[j][i] == 1) cnt++;
+				if (map[j][i] == 1) {
+                    if (first == 0) first = j;
+                    else last = j;
+                }
 			}
-			h = Math.max(h, cnt);
+            
+			h = Math.max(h, last - first + 1);
 		}
 
 		for (int i = y1; i < y2; i++) {
-			int cnt = 0;
+			int first = 0;
+            int last = 0;
+
 			for (int j = x1; j < x2; j++) {
-				if (map[i][j] == 1) cnt++;
+				if (map[i][j] == 1) {
+                    if (first == 0) first = j;
+                    else last = j;
+                }
 			}
-			w = Math.max(w, cnt);
+            
+			w = Math.max(w, last - first + 1);
 		}
 
 		return h * w;
