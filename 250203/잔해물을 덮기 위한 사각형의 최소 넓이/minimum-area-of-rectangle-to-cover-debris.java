@@ -55,11 +55,13 @@ public class Main {
 
 			for (int j = y1; j < y2; j++) {
 				if (map[j][i] == 1) {
-                    if (first == -1) first = j;
+                    if (first == -1) {
+                        first = j;
+                        last = j;
+                    }
                     else last = j;
                 }
 			}
-
             int x = first == -1 ? -1 : last - first + 1;
             
 			h = Math.max(h, x);
@@ -71,7 +73,10 @@ public class Main {
 
 			for (int j = x1; j < x2; j++) {
 				if (map[i][j] == 1) {
-                    if (first == -1) first = j;
+                    if (first == -1) {
+                        first = j;
+                        last = j;
+                    }
                     else last = j;
                 }
 			}
