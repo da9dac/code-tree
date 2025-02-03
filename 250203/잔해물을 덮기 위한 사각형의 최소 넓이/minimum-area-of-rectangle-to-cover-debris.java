@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
-	static int[][] map = new int[41][41];
+	static int[][] map = new int[2001][2001];
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -20,10 +20,10 @@ public class Main {
 
 	static int[] parseInt(StringTokenizer st) {
 		return new int[]{
-				Integer.parseInt(st.nextToken()) + 20,
-				Integer.parseInt(st.nextToken()) + 20,
-				Integer.parseInt(st.nextToken()) + 20,
-				Integer.parseInt(st.nextToken()) + 20
+				Integer.parseInt(st.nextToken()) + 1000,
+				Integer.parseInt(st.nextToken()) + 1000,
+				Integer.parseInt(st.nextToken()) + 1000,
+				Integer.parseInt(st.nextToken()) + 1000
 		};
 	}
 
